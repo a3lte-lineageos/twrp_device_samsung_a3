@@ -1,0 +1,21 @@
+# Product
+ro.chipname=MSM8916
+
+# LCD
+ro.sf.lcd_density=320
+
+# System property for cabl
+ro.qualcomm.cabl=2
+
+# Graphics
+debug.sf.hw=1
+debug.egl.hw=1
+persist.hwc.mdpcomp.enable=true
+debug.mdpcomp.logs=0
+dalvik.vm.heapsize=36m
+dev.pm.dyn_samplingrate=1
+persist.demo.hdmirotationlock=false
+debug.enable.sglscale=1
+
+# Simulate sdcard on /data/media
+persist.fuse_sdcard=true
