@@ -33,6 +33,24 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a53
 TARGET_CPU_SMP := true
 
+# Kernel
+BOARD_KERNEL_BASE := 0x80000000
+BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci
+BOARD_KERNEL_PAGESIZE := 2048
+BOARD_KERNEL_IMAGE_NAME := zImage
+BOARD_KERNEL_SEPARATED_DT := true
+BOARD_CUSTOM_BOOTIMG_MK :=  $(DEVICE_PATH)/mkbootimg.mk
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
+BOARD_MKBOOTIMG_ARGS += --tags_offset 0x01e00000
+BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE)
+KERNEL_TOOLCHAIN := $(PWD)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+TARGET_KERNEL_SOURCE := kernel/samsung/msm8916
+TARGET_KERNEL_CONFIG := msm8916_sec_defconfig
+TARGET_KERNEL_VARIANT_CONFIG := msm8916_sec_j5nlte_eur_defconfig
+TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
+TARGET_KERNEL_SELINUX_LOG_CONFIG := selinux_log_defconfig
+
 # Filesystems
 BOARD_SYSTEMIMAGE_PARTITION_TYPE := ext4
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
