@@ -14,3 +14,19 @@ git clone https://github.com/prototype74/android_device_samsung_j5nlte.git -b an
 ```bash
 export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch omni_j5nlte-eng; mka recoveryimage
 ```
+
+### Include awk tool (recommended)
+
+Add following content to `.repo/local_manifests/one-true-awk.xml`:
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <project
+        name="platform/external/one-true-awk"
+        path="external/one-true-awk"
+        revision="refs/tags/android-9.0.0_r61"
+        remote="aosp" />
+</manifest>
+```
+
+Then `repo sync` to pull awk
