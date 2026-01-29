@@ -24,5 +24,5 @@ $(call inherit-product, vendor/omni/config/common.mk)
 PRODUCT_DEVICE := j5nlte
 PRODUCT_NAME := omni_j5nlte
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := Galaxy J5
+PRODUCT_MODEL := SM-J500FN
 PRODUCT_MANUFACTURER := samsung
