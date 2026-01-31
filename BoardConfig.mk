@@ -113,4 +113,4 @@ TW_DEFAULT_BRIGHTNESS := 128
 
 # Init device model
 TARGET_INIT_VENDOR_LIB := libinit_j5xnlte
-TARGET_LIBINIT_DEFINES_FILE := $(DEVICE_PATH)/init/libinit_j5xnlte.cpp
+TARGET_LIBINIT_DEFINES_FILE := $(DEVICE_PATH)/init/init_j5xnlte.cpp
