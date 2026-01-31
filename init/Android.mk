@@ -14,4 +14,13 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/omni_j5xnlte.mk
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := init_j5xnlte.cpp
+LOCAL_MODULE := libinit_j5xnlte
+LOCAL_STATIC_LIBRARIES := libbase
+
+include $(BUILD_STATIC_LIBRARY)
