@@ -14,4 +14,4 @@
 # limitations under the License.
 #
 
-add_lunch_combo omni_j5xnlte-eng
+add_lunch_combo omni_a3ulte-eng

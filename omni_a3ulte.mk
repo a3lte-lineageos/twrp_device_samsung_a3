@@ -21,8 +21,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := j5xnlte
-PRODUCT_NAME := omni_j5xnlte
+PRODUCT_DEVICE := a3ulte
+PRODUCT_NAME := omni_a3ulte
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-J510F
+PRODUCT_MODEL := SM-A300FU
 PRODUCT_MANUFACTURER := samsung

@@ -14,4 +14,4 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/omni_j5xnlte.mk
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/omni_a3ulte.mk

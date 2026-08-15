@@ -1,9 +1,6 @@
 # Product
 ro.chipname=MSM8916
 
-# LCD
-ro.sf.lcd_density=320
-
 # System property for cabl
 ro.qualcomm.cabl=2
 
