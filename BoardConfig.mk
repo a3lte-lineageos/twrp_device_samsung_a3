@@ -100,7 +100,7 @@ TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone0/temp"
 TW_USE_TOOLBOX := true
 TW_EXCLUDE_BASH := true
 TW_EXCLUDE_PYTHON := true
-
+TW_DEVICE_VERSION := 0_notnoelchannel
 # TWRP crypto support
 TW_INCLUDE_CRYPTO := true
 
