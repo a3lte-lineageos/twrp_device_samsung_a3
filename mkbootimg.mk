@@ -3,7 +3,9 @@ LOCAL_PATH := $(call my-dir)
 KERNEL_OUT_TARGET := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ
 # Changed from dtbToolCM to standard dtbTool
 DTBTOOL := $(HOST_OUT_EXECUTABLES)/dtbToolLineage
-DTS_OUT_TARGET := $(KERNEL_OUT_TARGET)/arch/$(TARGET_ARCH)/boot/dts/
+
+# Fixed: Use TARGET_KERNEL_ARCH (arm) instead of TARGET_ARCH (arm64)
+DTS_OUT_TARGET := $(KERNEL_OUT_TARGET)/arch/$(TARGET_KERNEL_ARCH)/boot/dts/
 DTC_OUT_TARGET := $(KERNEL_OUT_TARGET)/scripts/dtc/
 INSTALLED_DTIMAGE_TARGET := $(PRODUCT_OUT)/dt.img
 
