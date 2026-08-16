@@ -1,8 +1,14 @@
 LOCAL_PATH := $(call my-dir)
 
 KERNEL_OUT_TARGET := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ
-# Changed from dtbToolCM to standard dtbTool
-DTBTOOL := $(HOST_OUT_EXECUTABLES)/dtbToolLineage
+
+# Dynamically select dtbTool based on Android SDK version
+# Android 7.1 = SDK 25, Android 8.1 = SDK 27
+ifeq ($(PLATFORM_SDK_VERSION),25)
+    DTBTOOL := $(HOST_OUT_EXECUTABLES)/dtbToolCM
+else
+    DTBTOOL := $(HOST_OUT_EXECUTABLES)/dtbToolLineage
+endif
 
 # Fixed: Use TARGET_KERNEL_ARCH (arm) instead of TARGET_ARCH (arm64)
 DTS_OUT_TARGET := $(KERNEL_OUT_TARGET)/arch/$(TARGET_KERNEL_ARCH)/boot/dts/
@@ -10,7 +16,7 @@ DTC_OUT_TARGET := $(KERNEL_OUT_TARGET)/scripts/dtc/
 INSTALLED_DTIMAGE_TARGET := $(PRODUCT_OUT)/dt.img
 
 $(INSTALLED_DTIMAGE_TARGET): $(DTBTOOL) $(INSTALLED_KERNEL_TARGET)
-	@echo "Building basic dt.img..."
+	@echo "Building basic dt.img using $(DTBTOOL)..."
 	$(hide) $(DTBTOOL) -o $@ -s $(BOARD_KERNEL_PAGESIZE) -p $(DTC_OUT_TARGET) $(DTS_OUT_TARGET)
 
 $(INSTALLED_BOOTIMAGE_TARGET): $(MKBOOTIMG) $(INTERNAL_BOOTIMAGE_FILES) $(BOOTIMAGE_EXTRA_DEPS) $(INSTALLED_DTIMAGE_TARGET)
