@@ -74,6 +74,8 @@ jobs:
         export OF_MAINTAINER="notnoelchannel"
         export TARGET_ARCH="arm"
         export FOX_BUILD_TYPE="Stable"
+        mkdir -p /home/runner/TWRP/out/host/linux-x86/bin/ 
+        curl -L -o /home/runner/TWRP/out/host/linux-x86/bin/dtbToolCM https://github.com/Vagelis1608/-V-_Kernel_X/raw/refs/heads/cm-14.1/dtbToolCM
         lunch omni_a3ulte-eng
         mka recoveryimage
         export PATH=$OLDPATH
