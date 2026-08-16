@@ -8,10 +8,8 @@
 /firmware-modem           vfat   	 /dev/block/bootdevice/by-name/modem      flags=backup=1;display=MODEM
 /firmware			    vfat			 /dev/block/bootdevice/by-name/apnhlos      flags=backup=1;display=APNHLOS
 
-/system_image     	emmc		/dev/block/platform/15540000.dwmmc0/by-name/SYSTEM	
-/cache_image     	emmc		/dev/block/platform/15540000.dwmmc0/by-name/CACHE
-/hidden_image 	emmc		/dev/block/platform/15540000.dwmmc0/by-name/HIDDEN
-/radio_image		emmc		/dev/block/platform/15540000.dwmmc0/by-name/RADIO
+/system_image     	emmc		/dev/block/bootdevice/by-name/system
+/cache_image     	emmc		/dev/block/bootdevice/by-name/cache
 
 /external_sd   vfat    				 /dev/block/mmcblk1p1   /dev/block/mmcblk1
 /usb-otg      vfat       				  /dev/block/sda1     /dev/block/sda  flags=display="USB-OTG";storage;wipeingui;removable
