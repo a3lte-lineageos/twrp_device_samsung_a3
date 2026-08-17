@@ -39,7 +39,7 @@ jobs:
         cd ~/TWRP
         mkdir ~/.bin
         curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
-        python3 ~/.bin/repo init --depth=1 -u https://github.com/notnoelchannel2/platform_manifest_twrp_omni.git -b shrp-8.1
+        python3 ~/.bin/repo init --depth=1 -u https://github.com/a3lte-lineageos/platform_manifest_twrp_omni.git -b shrp-8.1
         git clone --branch android-8.1 --single-branch https://github.com/a3lte-lineageos/twrp_device_samsung_a3.git ~/TWRP/device/samsung/a3ulte
         git clone --branch lineage-15.1 --single-branch https://github.com/a3lte-lineageos/android_kernel_samsung_msm8916.git ~/TWRP/kernel/samsung/msm8916
         sudo git clone --depth 1 --branch android-5.1.1_r38 --single-branch https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 /opt/toolchains/arm-eabi-4.8/
