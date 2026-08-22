@@ -44,7 +44,7 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 BOARD_MKBOOTIMG_ARGS += --tags_offset 0x01e00000
 BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE)
 
-KERNEL_TOOLCHAIN := /opt/toolchains/arm-eabi-4.8/bin
+KERNEL_TOOLCHAIN := /opt/toolchains/arm-eabi-4.9/bin
 KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
 TARGET_KERNEL_ARCH := arm
