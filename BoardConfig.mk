@@ -51,7 +51,7 @@ TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_HEADER_ARCH := arm
 TARGET_KERNEL_SOURCE := kernel/samsung/msm8916
 TARGET_KERNEL_CONFIG := msm8916_sec_defconfig
-TARGET_KERNEL_VARIANT_CONFIG := msm8916_sec_a33g_defconfig
+TARGET_KERNEL_VARIANT_CONFIG := msm8916_sec_a3_eur_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
 TARGET_KERNEL_SELINUX_LOG_CONFIG := selinux_log_defconfig
 
@@ -97,8 +97,7 @@ TW_NO_LEGACY_PROPS := true
 TW_NO_REBOOT_BOOTLOADER := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/msm_hsusb/gadget/lun%d/file"
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone0/temp"
-TW_USE_TOOLBOX := true
-TW_EXCLUDE_BASH := true
+TW_USE_BUSYBOX := true
 TW_EXCLUDE_PYTHON := true
 TW_DEVICE_VERSION := 0_notnoelchannel
 # TWRP crypto support
