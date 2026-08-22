@@ -42,7 +42,7 @@ jobs:
         python3 ~/.bin/repo init --depth=1 -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-8.1
         git clone --branch android-8.1 --single-branch https://github.com/a3lte-lineageos/twrp_device_samsung_a3.git ~/TWRP/device/samsung/a3ulte
         git clone --branch patch-1 --single-branch https://github.com/notnoelchannel2/android_kernel_samsung_msm8916-caf.git ~/TWRP/kernel/samsung/msm8916
-        sudo git clone --depth 1 --branch android-5.1.1_r38 --single-branch https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.9 /opt/toolchains/arm-eabi-4.9/
+        sudo git clone --depth 1 --branch android-6.0.1_r5 --single-branch https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/ /opt/toolchains/arm-linux-androideabi-4.9/
         python3 ~/.bin/repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
     - name: Building TWRP
       run: |
