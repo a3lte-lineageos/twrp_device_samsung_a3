@@ -20,6 +20,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
+PRODUCT_PACKAGES += sdc2Tool
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := a3ulte
 PRODUCT_NAME := omni_a3ulte
